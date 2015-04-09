@@ -12,3 +12,8 @@ hhsub$Global_active_power<-as.numeric(hhsub$Global_active_power)
 
 #Print the histogram
 hist(hhsub$Global_active_power, col = "red", main = "Global Active Power", xlab="Global Active Power (kilowatts)")
+
+#Finally, the code for creating the png file
+png(filename = "plot1.png",width = 480, height = 480)
+hist(hhsub$Global_active_power, col = "red", main = "Global Active Power", xlab="Global Active Power (kilowatts)")
+dev.off()
